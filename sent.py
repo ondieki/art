@@ -11,7 +11,6 @@ from nltk.classify import NaiveBayesClassifier
 from nltk.metrics import BigramAssocMeasures
 from nltk.probability import FreqDist, ConditionalFreqDist
 
-
 POLARITY_DATA_DIR = os.path.join('polarityData', 'rt-polaritydata')
 RT_POLARITY_POS_FILE = os.path.join(POLARITY_DATA_DIR, 'rt-polarity-pos.txt')
 RT_POLARITY_NEG_FILE = os.path.join(POLARITY_DATA_DIR, 'rt-polarity-neg.txt')
@@ -20,8 +19,10 @@ RT_POLARITY_NEG_FILE = os.path.join(POLARITY_DATA_DIR, 'rt-polarity-neg.txt')
 def evaluate_features(feature_select):
 	posFeatures = []
 	negFeatures = []
+
 	#http://stackoverflow.com/questions/367155/splitting-a-string-into-words-and-punctuation
 	#breaks up the sentences into lists of individual words (as selected by the input mechanism) and appends 'pos' or 'neg' after each list
+
 	with open(RT_POLARITY_POS_FILE, 'r') as posSentences:
 		for i in posSentences:
 			posWords = re.findall(r"[\w']+|[.,!?;]", i.rstrip())
