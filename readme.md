@@ -2,8 +2,11 @@
 
 ### Documentation
 
-For documentation, check out the blog post about this code [here](http://andybromberg.com/sentiment-analysis-python).
+The Data was sourced from reviews on Amazon, Quora discussions and a few other websites. I found few negative remarks about the Mona Lisa.
 
-### Note
+I used some Movie data set to augment the negative lexicon set, but I will work on this a bit more to test the effect of this step in this project. 
 
-Due to the fact that I developed this on Windows, there might be issues reading the polarity data files by line using the code I provided (because of inconsistent line break characters). If this comes up, please [email me](mailto:hi@andybromberg.com)!
+
+For documentation on the Sentiment Analysis implementation used in this project, check out this page (Andy Bromberg) [here](http://andybromberg.com/sentiment-analysis-python).
+
+
