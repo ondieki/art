@@ -1,3 +1,10 @@
+
+#LOAD SENTIMENT DATA TO HELP IN SENTIMENT CLASSIFICATION
+#THE DATA COMES FROM TEH SENTIWORDNET- a dictionary containing a list of positive and negative words to help in
+#word sentiment/polarity prediction
+
+#SCRIPT COURTESY OF: Andy Bromberg, EMAIL:hi@andybromberg.com
+
 import re, math, collections, itertools, os
 import nltk, nltk.classify.util, nltk.metrics
 from nltk.classify import NaiveBayesClassifier
@@ -8,7 +15,6 @@ from nltk.probability import FreqDist, ConditionalFreqDist
 POLARITY_DATA_DIR = os.path.join('polarityData', 'rt-polaritydata')
 RT_POLARITY_POS_FILE = os.path.join(POLARITY_DATA_DIR, 'rt-polarity-pos.txt')
 RT_POLARITY_NEG_FILE = os.path.join(POLARITY_DATA_DIR, 'rt-polarity-neg.txt')
-
 
 #this function takes a feature selection mechanism and returns its performance in a variety of metrics
 def evaluate_features(feature_select):
